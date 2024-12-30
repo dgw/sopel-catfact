@@ -30,7 +30,7 @@ def cat_fact(bot, trigger):
     try:
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
-        bot.say("HTTP error: " + e.message)
+        bot.say("HTTP error: " + str(e))
         return
     try:
         data = r.json()
