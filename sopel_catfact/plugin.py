@@ -1,19 +1,19 @@
-# coding=utf-8
-"""
-catfact.py - Sopel cat facts module
-Copyright 2018 dgw
-Licensed under the Eiffel Forum License 2
+"""sopel-catfact
 
-https://sopel.chat
+Sopel cat facts plugin
+
+Copyright 2018-2024 dgw
+Licensed under the Eiffel Forum License 2
 """
-from __future__ import unicode_literals, absolute_import, print_function, division
+from __future__ import annotations
 
 import requests
 
-from sopel.module import commands, example
+from sopel import plugin
 
-@commands('catfact')
-@example('.catfact')
+
+@plugin.commands('catfact')
+@plugin.example('.catfact')
 def cat_fact(bot, trigger):
     """Fetch a random cat fact."""
     try:
